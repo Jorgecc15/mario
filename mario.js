@@ -1,6 +1,6 @@
 function piso(nPisos,altura){
     //to do
-    return"<p>" + "####" + "</p>";
+    return"<p>" + "#" + "</p>";
 }
 let nPisos;
 do{
