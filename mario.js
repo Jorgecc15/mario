@@ -1,22 +1,24 @@
 function piso(nPisos,altura){
-    let texto = <p></p>
-    return"<p>" + "#" + "</p>";
-}
-let nPisos;
-let altura;
-do{
-nPisos=Number(prompt("ingrese el numero de pisos"))
-}while(nPisos%1 !=0||nPisos>10||nPisos<=0||isNaN(nPisos))
-do{
-altura=Number(prompt("ingrese la altura"))
-}while(altura%1 !=0||altura>10||altura<=0||isNaN(altura))
-let contenido="";
-
-for(let i=1;i<altura-nPisos;texto+'&nbsp'){
+    let texto = "<p>"
+    for(let i =0;i<altura-nPisos;i++){
+        texto=texto+"&nbsp;";
+    }
+    for(let i=0;i<nPisos;i++){
+        texto=texto+"#";
+    }
+    texto=texto+"</p>";
     return texto
 }
-for(let i = 1;nPisos;texto+"#")
+let nPisos;
+do{
+altura=Number(prompt("ingrese el numero de pisos"))
+}while(altura%1 !=0||altura>10||altura<=0||isNaN(altura))
 
+let contenido="";
+
+for(let i=1;i<=altura;i++){
+    contenido=contenido+piso(i,altura)
+}
 
 let contenedor=document.querySelector("#contenedor");
 contenedor.innerHTML= contenido;
